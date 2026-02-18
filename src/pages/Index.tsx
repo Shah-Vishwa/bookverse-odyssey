@@ -1,13 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { CartProvider } from '@/context/CartContext';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import BooksSection from '@/components/BooksSection';
+import CategoriesSection from '@/components/CategoriesSection';
+import AboutSection from '@/components/AboutSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import CartDrawer from '@/components/CartDrawer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <CartProvider>
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <CartDrawer />
+        <HeroSection />
+        <BooksSection />
+        <CategoriesSection />
+        <AboutSection />
+        <ContactSection />
+        <Footer />
       </div>
-    </div>
+    </CartProvider>
   );
 };
 
