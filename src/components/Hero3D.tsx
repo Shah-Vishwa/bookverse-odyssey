@@ -42,25 +42,25 @@ const BookModel: React.FC<{ position: [number, number, number]; rotation: [numbe
 const HeroScene: React.FC = () => {
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[5, 5, 5]} intensity={1} color="#0ea5e9" />
-      <pointLight position={[-5, 3, 3]} intensity={0.6} color="#8b5cf6" />
+      <ambientLight intensity={0.6} color="#F5F3EE" />
+      <pointLight position={[5, 5, 5]} intensity={0.8} color="#D94035" />
+      <pointLight position={[-5, 3, 3]} intensity={0.5} color="#E8E4DA" />
       <spotLight
         position={[0, 8, 4]}
         angle={0.4}
         penumbra={0.8}
-        intensity={1.2}
-        color="#ffffff"
+        intensity={1}
+        color="#FFF8F0"
         castShadow
       />
 
-      <BookModel position={[-2.5, 0.5, 0]} rotation={[0.2, 0.5, 0.1]} color="#0ea5e9" speed={0.8} />
-      <BookModel position={[0, -0.3, 1]} rotation={[-0.1, -0.3, 0.05]} color="#8b5cf6" speed={1} />
-      <BookModel position={[2.5, 0.8, -0.5]} rotation={[0.15, 0.8, -0.1]} color="#06b6d4" speed={1.2} />
-      <BookModel position={[-1, 1.5, -1]} rotation={[0.3, -0.6, 0.2]} color="#6366f1" speed={0.6} />
-      <BookModel position={[1.5, -1, 0.5]} rotation={[-0.2, 0.4, -0.15]} color="#0284c7" speed={0.9} />
+      <BookModel position={[-2.5, 0.5, 0]} rotation={[0.2, 0.5, 0.1]} color="#D94035" speed={0.8} />
+      <BookModel position={[0, -0.3, 1]} rotation={[-0.1, -0.3, 0.05]} color="#8B4513" speed={1} />
+      <BookModel position={[2.5, 0.8, -0.5]} rotation={[0.15, 0.8, -0.1]} color="#C93C32" speed={1.2} />
+      <BookModel position={[-1, 1.5, -1]} rotation={[0.3, -0.6, 0.2]} color="#6A6A62" speed={0.6} />
+      <BookModel position={[1.5, -1, 0.5]} rotation={[-0.2, 0.4, -0.15]} color="#272720" speed={0.9} />
 
-      <Environment preset="night" />
+      <Environment preset="apartment" />
     </>
   );
 };
